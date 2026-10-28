@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://relx-pod-compatibility.netlify.app/sitemap.xml
