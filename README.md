@@ -25,6 +25,31 @@ Choose your RELX device, see whether **RELX Pod Pro** and **Pod Pro 2** fit it, 
 
 ---
 
+## ✅ Compatibility at a Glance
+
+| Device | RELX Pod Pro | RELX Pod Pro 2 |
+|---|:---:|:---:|
+| Infinity 2 | ✅ Fits | ✅ Fits |
+| Infinity 2 Plus | ✅ Fits | ✅ Fits |
+| Infinity | ✅ Fits | 🟢 Usually fits |
+| Infinity Plus | ✅ Fits | 🟢 Usually fits |
+| Essential | ✅ Fits | 🟢 Usually fits |
+| Essential 2 | 🟡 Check your pack | 🟡 Check your pack |
+| Artisan | ✅ Fits | ✅ Fits |
+| Artisan Plus | ✅ Fits | 🟡 Check your pack |
+| Classic | ❌ Doesn't fit | ❌ Doesn't fit |
+| Creator / Creator Pro | ❌ Doesn't fit | ❌ Doesn't fit |
+| ULTRA | 🟡 Check your pack | ❌ Doesn't fit |
+
+🟢 **Usually fits:** some Pod Pro 2 packs are labeled for the Infinity 2 family only, so check that the pack lists your device.
+🟡 **Check your pack:** not confirmed for this device. Check the pack, or [ask PodX on WhatsApp](https://wa.me/971541341884).
+
+💡 On **Infinity 2** and **Infinity 2 Plus**, use **Pod Pro 2** to unlock the Eco, Smooth and Boost power modes.
+
+👉 See the full interactive version, with every compatible pod and price, at [relx-pod-compatibility.netlify.app](https://relx-pod-compatibility.netlify.app).
+
+---
+
 ## ✨ Features
 
 - 📱 **Device picker:** choose your RELX device and get an instant compatibility verdict
@@ -39,18 +64,21 @@ Choose your RELX device, see whether **RELX Pod Pro** and **Pod Pro 2** fit it, 
 
 ## 🔌 Embed the Chart
 
-Add the compatibility chart to your own page with an iframe:
+Add the compatibility chart to your blog, forum or store page. It's free, and it updates itself whenever the chart changes:
 
 ```html
 <iframe
   src="https://relx-pod-compatibility.netlify.app/?embed=chart"
   title="RELX pod compatibility chart"
   width="100%"
-  height="600"
+  height="820"
   loading="lazy"
-  style="border:0;"
+  style="border:0;max-width:760px;"
 ></iframe>
+<p>Source: <a href="https://relx-pod-compatibility.netlify.app/">RELX pod compatibility chart by PodX</a></p>
 ```
+
+You can also copy this code from the **Add this chart to your site** box on the live page.
 
 ---
 
@@ -80,13 +108,36 @@ After any content change, update `<lastmod>` in `sitemap.xml`.
 
 ---
 
+## 💻 Run Locally
+
+No build step and no dependencies. Serve the folder with any static server, for example:
+
+```bash
+python -m http.server 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000). Add `?device=infinity-2` to open a device's result directly, or `?embed=chart` to see the embed view.
+
+---
+
 ## 🚀 Deploy
 
-The site is a static page hosted on Netlify. From the repo folder, run:
+The site is a static page hosted on Netlify, with no build command and `.` as the publish directory.
+
+- **From GitHub:** once the repo is linked in Netlify (**Project configuration → Developer settings → Link repository**), every push to `main` goes live automatically.
+- **From your computer:** run this in the repo folder:
 
 ```bash
 netlify deploy --prod --dir .
 ```
+
+---
+
+## 🔎 SEO
+
+- Canonical URL, Open Graph tags and JSON-LD structured data (`WebPage`, `WebApplication`, `FAQPage`)
+- A static compatibility table and FAQ in the HTML, so crawlers can read them without JavaScript
+- `robots.txt` and `sitemap.xml`, verified in Google Search Console
 
 ---
 
@@ -104,5 +155,7 @@ netlify deploy --prod --dir .
 <div align="center">
 
 ⚠️ *For adult smokers and vapers only (18+). Nicotine is addictive.* ⚠️
+
+<sub>RELX is a trademark of its owner. PodX is an independent store, and this chart is its own guide, not an official RELX document.</sub>
 
 </div>
